@@ -1,0 +1,38 @@
+
+
+// This program is to find the number of digits in the given number 
+
+//input : 2345
+//output : 4
+
+// This is very easy ,we just going to see this in three method 
+
+//the third method is effective
+
+#include <stdio.h>
+
+int main()
+{
+    long long int num,len,power;
+    scanf("%lld",&num);
+                 //method 1
+    while(num>0){
+        
+         len++;
+         num=num/10;
+     }
+     return 0;
+    
+                 //method 2
+    for(len=0;num>0;len++,num/=10);
+    
+                 //method 3
+    for(power=1,len=0;num/power;len++,power*=10);
+   
+   
+   
+    printf("%lld",len);
+}
+
+
+
